@@ -1,0 +1,88 @@
+@import "../../styles/variables/variables.scss";
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.flCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.card {
+  height: 218px;
+  max-height: auto;
+  margin-bottom: 25px;
+  word-wrap: break-word;
+  padding: 17px 30px 17px 20px;
+  display: flex;
+  justify-content: space-between;
+  background: $white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+.image {
+  margin-right: 25px;
+  img {
+    width: 145px;
+    height: 155px;
+  }
+}
+
+.title {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: $black-blue;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: $white-aluminum;
+}
+
+.bottomPrice {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+
+  color: $black-blue;
+}
+
+.buttons {
+  max-width: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.increase {
+  width: 35px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: $pale-orange-yellow;
+  color: $white;
+}
+
+.decrease {
+  width: 35px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: $pale-orange-yellow;
+  color: $white;
+}

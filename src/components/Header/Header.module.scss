@@ -1,0 +1,44 @@
+@import "../../styles/variables/variables.scss";
+.flex {
+  min-width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: $almost-black;
+}
+
+.favorite {
+  position: relative;
+}
+
+.basket {
+  position: relative;
+}
+
+.count {
+  display: inline-block;
+  min-width: 18px;
+  min-height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  right: -10px;
+  background: #ffa542;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+}
