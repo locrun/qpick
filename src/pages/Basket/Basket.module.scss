@@ -1,7 +1,6 @@
 @import "../../styles/variables/variables.scss";
 
 .container {
-  //min-height: 100vh;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -22,6 +21,7 @@
 .order {
   position: relative;
   height: 120px;
+  margin-bottom: 25px;
 }
 
 .totalPrice {
@@ -57,6 +57,8 @@
 }
 
 .alert {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -19,7 +19,7 @@ interface IBasketProps {
 export const Basket: FC = () => {
   const { isEmpty, items, cartTotal } = useCart();
 
-  if (isEmpty) return <h1 className={s.alert}>Корзина пуста</h1>;
+  if (isEmpty) return <h2 className={s.alert}>Добавьте товары в корзину</h2>;
 
   return (
     <>

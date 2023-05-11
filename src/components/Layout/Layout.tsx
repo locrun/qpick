@@ -7,7 +7,7 @@ export const Layout: FC = () => {
   return (
     <div className="container">
       <Header />
-      <main >
+      <main className="main">
         <Outlet />
       </main>
       <Footer />

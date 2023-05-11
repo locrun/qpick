@@ -8,6 +8,10 @@ body {
   font-family: Montserrat, sans-serif;
   background: $smoky-white;
 }
+.main {
+  flex-grow: 2;
+  position: relative;
+}
 .container {
   max-width: 1140px;
   padding: 0 15px;
