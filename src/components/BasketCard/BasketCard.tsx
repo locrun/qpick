@@ -5,71 +5,49 @@ import deleteIcon from "../../assets/delete.svg";
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
 
-import { IProduct } from "../ProductCard/ProductCard";
+import { IProduct } from "../CatalogCard/CatalogCard";
 
 import s from "./BasketCard.module.scss";
 
 
-interface IBasketProps {
-  item: {
-    id: string,
-    img: string,
-    itemTotal: number,
-    oldPrice?: number,
-    price: number,
-    quantity: number,
-    rate: number,
-    title: string
-  }
-};
+export const BasketCard: FC<IProduct> = ({ product }) => {
 
-
-export const BasketCard: FC<IBasketProps> = ({ item }) => {
-
-  const {
-    isEmpty,
-    totalUniqueItems,
-    totalItems,
-    cartTotal,
-    updateItemQuantity,
-    removeItem,
-    emptyCart, } = useCart();
+  const { updateItemQuantity, removeItem } = useCart();
 
   return (
     <div className={s.card}>
-      <div className={s.flexCol}>
-        <div className={s.flex}>
-          <div className={s.image}>
-            <img src={item.img} alt="product" />
-          </div>
-          <div style={{ maxWidth: "377px" }}>
-            <h4 className={s.title}>{item.title}</h4>
-            <div className={s.price}>{item.price} &#8381;</div>
-          </div>
+      <div className={s.flex}>
+        <div className={s.image}>
+          <img src={product.img} alt="product" />
         </div>
+        <div className={s.group}>
+          <h4 className={s.title}>{product.title}</h4>
+          <div className={s.price}>{product.price} &#8381;</div>
+        </div>
+        <button
+          className={s.remove}
+          onClick={() => removeItem(product.id)}
+        >
+          <img src={deleteIcon} alt="delete" />
+        </button>
+      </div>
+      <div className={s.flex}>
         <div className={s.buttons}>
           <button
             className={s.decrease}
-            onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
+            onClick={() => updateItemQuantity(product.id, product.quantity - 1)}
           >
             <img src={minus} alt="minus" />
           </button>
-          <span>{item.quantity}</span>
+          <span>{product.quantity}</span>
           <button
             className={s.increase}
-            onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
+            onClick={() => updateItemQuantity(product.id, product.quantity + 1)}
           >
             <img src={plus} alt="plus" />
           </button>
         </div>
-      </div>
-      <div className={s.flCol}>
-        <button
-          onClick={() => removeItem(item.id)}
-        >
-          <img src={deleteIcon} alt="delete" />
-        </button>
-        <div className={s.bottomPrice}>{item.price} &#8381;</div>
+        <div className={s.bottomPrice}>{product.price} &#8381;</div>
       </div>
     </div>
   );

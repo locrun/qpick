@@ -6,7 +6,10 @@
   flex-wrap: wrap;
 }
 .cardWrapper {
-  width: 633px;
+  width: 100%;
+  @media (min-width: 667px) {
+    width: 633px;
+  }
 }
 .basket {
   margin-top: 30px;
@@ -19,13 +22,17 @@
 }
 
 .order {
-  position: relative;
+  width: 100%;
   height: 120px;
+  position: relative;
   margin-bottom: 25px;
+  @media (min-width: 1024px) {
+    max-width: 350px;
+  }
 }
 
 .totalPrice {
-  width: 348px;
+  width: 100%;
   height: 100%;
   padding: 21px 16px;
   display: flex;
@@ -33,18 +40,21 @@
   background: $white;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
   color: $black;
+
+  @media (min-width: 667px) {
+    max-width: 348px;
+  }
 }
 
 .orderBtn {
+  width: 100%;
+  height: 65px;
   position: absolute;
   bottom: 0;
-  width: 348px;
-  height: 65px;
   background: $almost-black;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -54,6 +64,10 @@
   line-height: 21px;
   text-align: center;
   color: $white;
+
+  @media (min-width: 667px) {
+    max-width: 348px;
+  }
 }
 
 .alert {

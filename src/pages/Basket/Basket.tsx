@@ -1,19 +1,7 @@
 import { FC } from "react";
-
 import { useCart } from "react-use-cart";
 import { BasketCard } from "../../components/BasketCard/BasketCard";
 import s from "./Basket.module.scss";
-
-interface IBasketProps {
-  id: string,
-  img: string,
-  itemTotal: number,
-  oldPrice?: number,
-  price: number,
-  quantity: number,
-  rate: number,
-  title: string
-};
 
 
 export const Basket: FC = () => {
@@ -28,7 +16,7 @@ export const Basket: FC = () => {
         <div className={s.cardWrapper}>
           {
             items.map((item: any) => {
-              return <BasketCard key={item.id} item={item} />;
+              return <BasketCard key={item.id} product={item} />;
             })
           }
         </div>
